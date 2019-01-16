@@ -8,6 +8,12 @@
 
 import Foundation
 
+enum CurrencyType: String {
+    case usd = "USD"
+    case gbp = "GBP"
+    case eur = "EUR"
+}
+
 struct SimpleCurrency: Decodable {
     let date: Date
     let rate: Double

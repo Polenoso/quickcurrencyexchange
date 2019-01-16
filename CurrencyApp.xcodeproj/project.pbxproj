@@ -15,6 +15,16 @@
 		D4D51E9121EF503C00F934F9 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D51E9021EF503C00F934F9 /* Currency.swift */; };
 		D4D51E9421EF715500F934F9 /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D51E9321EF715500F934F9 /* ModelTests.swift */; };
 		D4D51E9721EF77E200F934F9 /* Date+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D51E9621EF77E200F934F9 /* Date+Utils.swift */; };
+		D4D51E9921EF7D6600F934F9 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D51E9821EF7D6600F934F9 /* Application.swift */; };
+		D4D51E9E21EF7D9800F934F9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D51E9C21EF7D9800F934F9 /* MainViewController.swift */; };
+		D4D51E9F21EF7D9800F934F9 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4D51E9D21EF7D9800F934F9 /* MainViewController.xib */; };
+		D4D51EA121EF7E4D00F934F9 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D51EA021EF7E4D00F934F9 /* MainPresenter.swift */; };
+		D4D51EA321EF817F00F934F9 /* MainWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D51EA221EF817F00F934F9 /* MainWorker.swift */; };
+		D4D51EA821EF828A00F934F9 /* CurrencyMockStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D51EA721EF828A00F934F9 /* CurrencyMockStore.swift */; };
+		D4D51EAA21EF82B400F934F9 /* CurrencyStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D51EA921EF82B400F934F9 /* CurrencyStoreProtocol.swift */; };
+		D4D51EAF21EF868900F934F9 /* MainModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D51EAE21EF868900F934F9 /* MainModels.swift */; };
+		D4D51EB221EF8BF600F934F9 /* MainDisplayedRateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D51EB021EF8BF600F934F9 /* MainDisplayedRateTableViewCell.swift */; };
+		D4D51EB321EF8BF600F934F9 /* MainDisplayedRateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4D51EB121EF8BF600F934F9 /* MainDisplayedRateTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +50,16 @@
 		D4D51E9021EF503C00F934F9 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		D4D51E9321EF715500F934F9 /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
 		D4D51E9621EF77E200F934F9 /* Date+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Utils.swift"; sourceTree = "<group>"; };
+		D4D51E9821EF7D6600F934F9 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		D4D51E9C21EF7D9800F934F9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		D4D51E9D21EF7D9800F934F9 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		D4D51EA021EF7E4D00F934F9 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		D4D51EA221EF817F00F934F9 /* MainWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWorker.swift; sourceTree = "<group>"; };
+		D4D51EA721EF828A00F934F9 /* CurrencyMockStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyMockStore.swift; sourceTree = "<group>"; };
+		D4D51EA921EF82B400F934F9 /* CurrencyStoreProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyStoreProtocol.swift; sourceTree = "<group>"; };
+		D4D51EAE21EF868900F934F9 /* MainModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModels.swift; sourceTree = "<group>"; };
+		D4D51EB021EF8BF600F934F9 /* MainDisplayedRateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDisplayedRateTableViewCell.swift; sourceTree = "<group>"; };
+		D4D51EB121EF8BF600F934F9 /* MainDisplayedRateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainDisplayedRateTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,11 +120,13 @@
 		D4D51E8921EF3D8500F934F9 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				D4D51EA421EF825300F934F9 /* Stores */,
 				D4D51E9521EF77D000F934F9 /* Utils */,
 				D4D51E8D21EF3DD900F934F9 /* Model */,
 				D4D51E8C21EF3DD000F934F9 /* Network */,
 				D4D51E6921EF3D5C00F934F9 /* AppDelegate.swift */,
 				D4D51E8B21EF3D9900F934F9 /* Supporting files */,
+				D4D51E9821EF7D6600F934F9 /* Application.swift */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -112,6 +134,7 @@
 		D4D51E8A21EF3D8F00F934F9 /* Interface */ = {
 			isa = PBXGroup;
 			children = (
+				D4D51E9A21EF7D7700F934F9 /* Scenes */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -156,6 +179,45 @@
 				D4D51E9621EF77E200F934F9 /* Date+Utils.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		D4D51E9A21EF7D7700F934F9 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				D4D51E9B21EF7D7C00F934F9 /* Main Scene */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		D4D51E9B21EF7D7C00F934F9 /* Main Scene */ = {
+			isa = PBXGroup;
+			children = (
+				D4D51E9C21EF7D9800F934F9 /* MainViewController.swift */,
+				D4D51E9D21EF7D9800F934F9 /* MainViewController.xib */,
+				D4D51EA021EF7E4D00F934F9 /* MainPresenter.swift */,
+				D4D51EA221EF817F00F934F9 /* MainWorker.swift */,
+				D4D51EAE21EF868900F934F9 /* MainModels.swift */,
+				D4D51EB021EF8BF600F934F9 /* MainDisplayedRateTableViewCell.swift */,
+				D4D51EB121EF8BF600F934F9 /* MainDisplayedRateTableViewCell.xib */,
+			);
+			path = "Main Scene";
+			sourceTree = "<group>";
+		};
+		D4D51EA421EF825300F934F9 /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				D4D51EA921EF82B400F934F9 /* CurrencyStoreProtocol.swift */,
+				D4D51EA621EF827700F934F9 /* Mock */,
+			);
+			path = Stores;
+			sourceTree = "<group>";
+		};
+		D4D51EA621EF827700F934F9 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				D4D51EA721EF828A00F934F9 /* CurrencyMockStore.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +302,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4D51E7421EF3D5F00F934F9 /* LaunchScreen.storyboard in Resources */,
+				D4D51E9F21EF7D9800F934F9 /* MainViewController.xib in Resources */,
+				D4D51EB321EF8BF600F934F9 /* MainDisplayedRateTableViewCell.xib in Resources */,
 				D4D51E7121EF3D5F00F934F9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,9 +322,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4D51EAA21EF82B400F934F9 /* CurrencyStoreProtocol.swift in Sources */,
+				D4D51E9921EF7D6600F934F9 /* Application.swift in Sources */,
+				D4D51EB221EF8BF600F934F9 /* MainDisplayedRateTableViewCell.swift in Sources */,
 				D4D51E9121EF503C00F934F9 /* Currency.swift in Sources */,
+				D4D51EA821EF828A00F934F9 /* CurrencyMockStore.swift in Sources */,
+				D4D51EA321EF817F00F934F9 /* MainWorker.swift in Sources */,
 				D4D51E9721EF77E200F934F9 /* Date+Utils.swift in Sources */,
+				D4D51E9E21EF7D9800F934F9 /* MainViewController.swift in Sources */,
 				D4D51E6A21EF3D5C00F934F9 /* AppDelegate.swift in Sources */,
+				D4D51EA121EF7E4D00F934F9 /* MainPresenter.swift in Sources */,
+				D4D51EAF21EF868900F934F9 /* MainModels.swift in Sources */,
 				D4D51E8F21EF413700F934F9 /* BPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
