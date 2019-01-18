@@ -9,5 +9,5 @@
 import Foundation
 
 protocol CurrencyStoreProtocol: class {
-    func getBitcoinsRates(from startDate: Date, to endDate: Date, for currencyType: CurrencyType, completionBlock:(_ bpi:MultipleBPI, _ error: Swift.Error?) -> ())
+    func getBitcoinsRates(from startDate: Date, to endDate: Date, for currencyType: CurrencyType, completionBlock: @escaping (_ bpi:MultipleBPI?, _ error: Swift.Error?) -> ())
 }

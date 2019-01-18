@@ -10,7 +10,7 @@ import Foundation
 
 final class CurrencyMockStore: CurrencyStoreProtocol {
     
-    func getBitcoinsRates(from startDate: Date = Date(), to endDate: Date = Date(), for currencyType: CurrencyType = .usd, completionBlock: (MultipleBPI, Swift.Error?) -> ()) {
+    func getBitcoinsRates(from startDate: Date = Date(), to endDate: Date = Date(), for currencyType: CurrencyType = .usd, completionBlock: @escaping (MultipleBPI?, Swift.Error?) -> ()) {
         
         let json = "{\"2013-09-01\":128.2597,\"2013-09-02\":127.3648,\"2013-09-03\":127.5915,\"2013-09-04\":120.5738,\"2013-09-05\":120.5333}"
         let data = Data(json.utf8)

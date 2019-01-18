@@ -29,10 +29,13 @@ final class DetailRatePresenter: DetailRateInputProtocol, DetailRateDataStore {
     
     private var output: DetailRateOutputProtocol
     
+    private var worker: DetailRateWorkerProtocol
+    
     private var numberOfValues = 0
     
-    init(output: DetailRateOutputProtocol) {
+    init(worker: DetailRateWorkerProtocol = DetailRateWorker(),output: DetailRateOutputProtocol) {
         self.output = output
+        self.worker = worker
     }
     
     func getDetail(request: DetailRateModels.GetDetail.Request) {
@@ -48,12 +51,11 @@ final class DetailRatePresenter: DetailRateInputProtocol, DetailRateDataStore {
                 let remainingCurrencies:[CurrencyType] = CurrencyType.allCases.filter({ (type) -> Bool in
                     return !currencyDto.values.contains(where: {$0.type == type})
                 })
-                let store = CurrencyMockStore()
                 remainingCurrencies.forEach { (type) in
-                    store.getBitcoinsRates(from: currencyDto.date, to: currencyDto.date, for: type, completionBlock: {[unowned self] (mbpi, error) in
+                    self.worker.fetchRates(for: type, from: currencyDto.date, to: currencyDto.date, completionBlock: { (mbpi, error) in
                         self.numberOfValues += 1
                         if (error == nil) {
-                            self.presentSingleValue(mbpi.bpis.first!, type: type)
+                            self.presentSingleValue(mbpi!.bpis.first!, type: type)
                         }
                         self.didEndLoading()
                     })

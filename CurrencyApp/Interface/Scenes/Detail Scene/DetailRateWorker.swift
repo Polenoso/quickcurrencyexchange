@@ -1,18 +1,18 @@
 //
-//  MainWorker.swift
+//  DetailRateWorker.swift
 //  CurrencyApp
 //
-//  Created by Aitor Pagán on 16/1/19.
+//  Created by Aitor Pagán on 18/01/2019.
 //  Copyright © 2019 polenoso. All rights reserved.
 //
 
 import Foundation
 
-protocol MainSceneWorkerProtocol {
+protocol DetailRateWorkerProtocol {
     func fetchRates(for type: CurrencyType, from: Date, to: Date, completionBlock: @escaping (MultipleBPI?, Swift.Error?) -> ())
 }
 
-final class MainWorker: MainSceneWorkerProtocol {
+final class DetailRateWorker: DetailRateWorkerProtocol {
     
     private var currencyStore: CurrencyStoreProtocol
     

@@ -31,7 +31,7 @@ final class MainPresenter: MainSceneInputProtocol, MainSceneDataStore {
     
     var output: MainSceneOutputProtocol?
     
-    private var cachedBpi: MultipleBPI?
+    private var cachedValues: [SimpleCurrency] = []
     
     init(worker: MainSceneWorkerProtocol = MainWorker(), output: MainSceneOutputProtocol? = nil) {
         self.worker = worker
@@ -44,7 +44,9 @@ final class MainPresenter: MainSceneInputProtocol, MainSceneDataStore {
             if let error = error {
                 self.presentError(error)
             } else {
-                self.cachedBpi = bpi
+                self.cachedValues = (bpi?.bpis.sorted(by: { (s1, s2) -> Bool in
+                    return s1.date.compare(s2.date) == ComparisonResult.orderedAscending ? false : true
+                }))!
                 self.presentRates()
             }
         }
@@ -52,13 +54,13 @@ final class MainPresenter: MainSceneInputProtocol, MainSceneDataStore {
     
     func selectRate(request: MainModels.SelectRate.Request) {
         let index = request.index
-        guard let bpi = cachedBpi?.bpis[index] else { return }
+        let bpi = cachedValues[index]
         selectedBpi = CurrencyDto.init(date: bpi.date, values: [CurrencyValue.init(type: .usd, value: bpi.rate)])
         output?.displaySelectRate(viewModel: MainModels.SelectRate.ViewModel())
     }
     
     private func presentRates() {
-        let displayed: [MainModels.GetRates.Displayed] = self.cachedBpi?.bpis.map({MainModels.GetRates.Displayed(date: $0.date.toString(with: DateFormat.displayed), value: "\($0.rate) $")}) ?? []
+        let displayed: [MainModels.GetRates.Displayed] = self.cachedValues.map({MainModels.GetRates.Displayed(date: $0.date.toString(with: DateFormat.displayed), value: "\($0.rate) $")})
         let viewModel = MainModels.GetRates.ViewModel.init(data: displayed)
         output?.displayRates(viewModel: viewModel)
     }
