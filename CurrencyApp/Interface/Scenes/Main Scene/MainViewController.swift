@@ -13,6 +13,7 @@ class MainViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     
     var input: MainSceneInputProtocol?
+    var router: (MainSceneNavigationProtocol & MainSceneDataPassing)?
 
     var dataSource: [MainModels.GetRates.Displayed] = []
     
@@ -29,6 +30,10 @@ class MainViewController: UIViewController {
     private func setup() {        
         let presenter = MainPresenter(output: self)
         input = presenter
+        let navigator = MainRouter()
+        navigator.viewController = self
+        navigator.dataStore = presenter
+        router = navigator
     }
     
     private func setupTableView() {
@@ -58,6 +63,17 @@ extension MainViewController: MainSceneOutputProtocol {
         dataSource = viewModel.data
         tableView.reloadData()
     }
+    
+    func displayError(viewModel: MainModels.Error.ViewModel) {
+        let alert = UIAlertController(title: viewModel.title, message: viewModel.message, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "ok", style: .default, handler: nil)
+        alert.addAction(alertAction)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func displaySelectRate(viewModel: MainModels.SelectRate.ViewModel) {
+        router?.navigateToDetail()
+    }
 }
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
@@ -72,6 +88,11 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         cell.updateUI(viewModel: dataSource[indexPath.row])
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let request = MainModels.SelectRate.Request.init(index: indexPath.row)
+        input?.selectRate(request: request)
     }
     
 }

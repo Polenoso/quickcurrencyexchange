@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D4073EF821F24B7E0055916C /* CurrencyDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4073EF721F24B7E0055916C /* CurrencyDto.swift */; };
+		D4073EFA21F24C570055916C /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4073EF921F24C570055916C /* MainRouter.swift */; };
+		D4073EFD21F250740055916C /* DetailRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4073EFB21F250740055916C /* DetailRateViewController.swift */; };
+		D4073EFE21F250740055916C /* DetailRateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4073EFC21F250740055916C /* DetailRateViewController.xib */; };
+		D4073F0021F2529A0055916C /* DetailRatePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4073EFF21F2529A0055916C /* DetailRatePresenter.swift */; };
+		D4073F0221F2532A0055916C /* DetailRateModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4073F0121F2532A0055916C /* DetailRateModels.swift */; };
+		D4073F0421F25B510055916C /* DetailRateRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4073F0321F25B510055916C /* DetailRateRouter.swift */; };
+		D4073F0721F25CD60055916C /* DetailRateValueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4073F0521F25CD60055916C /* DetailRateValueTableViewCell.swift */; };
+		D4073F0821F25CD60055916C /* DetailRateValueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4073F0621F25CD60055916C /* DetailRateValueTableViewCell.xib */; };
 		D4D51E6A21EF3D5C00F934F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D51E6921EF3D5C00F934F9 /* AppDelegate.swift */; };
 		D4D51E7121EF3D5F00F934F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4D51E7021EF3D5F00F934F9 /* Assets.xcassets */; };
 		D4D51E7421EF3D5F00F934F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4D51E7221EF3D5F00F934F9 /* LaunchScreen.storyboard */; };
@@ -38,6 +47,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D4073EF721F24B7E0055916C /* CurrencyDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyDto.swift; sourceTree = "<group>"; };
+		D4073EF921F24C570055916C /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		D4073EFB21F250740055916C /* DetailRateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRateViewController.swift; sourceTree = "<group>"; };
+		D4073EFC21F250740055916C /* DetailRateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailRateViewController.xib; sourceTree = "<group>"; };
+		D4073EFF21F2529A0055916C /* DetailRatePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRatePresenter.swift; sourceTree = "<group>"; };
+		D4073F0121F2532A0055916C /* DetailRateModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRateModels.swift; sourceTree = "<group>"; };
+		D4073F0321F25B510055916C /* DetailRateRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRateRouter.swift; sourceTree = "<group>"; };
+		D4073F0521F25CD60055916C /* DetailRateValueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRateValueTableViewCell.swift; sourceTree = "<group>"; };
+		D4073F0621F25CD60055916C /* DetailRateValueTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailRateValueTableViewCell.xib; sourceTree = "<group>"; };
 		D4D51E6621EF3D5C00F934F9 /* CurrencyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D51E6921EF3D5C00F934F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4D51E7021EF3D5F00F934F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -83,8 +101,23 @@
 		D4073EF521F249300055916C /* Detail Scene */ = {
 			isa = PBXGroup;
 			children = (
+				D4073EFB21F250740055916C /* DetailRateViewController.swift */,
+				D4073EFC21F250740055916C /* DetailRateViewController.xib */,
+				D4073EFF21F2529A0055916C /* DetailRatePresenter.swift */,
+				D4073F0121F2532A0055916C /* DetailRateModels.swift */,
+				D4073F0321F25B510055916C /* DetailRateRouter.swift */,
+				D4073F0521F25CD60055916C /* DetailRateValueTableViewCell.swift */,
+				D4073F0621F25CD60055916C /* DetailRateValueTableViewCell.xib */,
 			);
 			path = "Detail Scene";
+			sourceTree = "<group>";
+		};
+		D4073EF621F24B2E0055916C /* Data Transport */ = {
+			isa = PBXGroup;
+			children = (
+				D4073EF721F24B7E0055916C /* CurrencyDto.swift */,
+			);
+			path = "Data Transport";
 			sourceTree = "<group>";
 		};
 		D4D51E5D21EF3D5C00F934F9 = {
@@ -127,6 +160,7 @@
 		D4D51E8921EF3D8500F934F9 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				D4073EF621F24B2E0055916C /* Data Transport */,
 				D4D51EA421EF825300F934F9 /* Stores */,
 				D4D51E9521EF77D000F934F9 /* Utils */,
 				D4D51E8D21EF3DD900F934F9 /* Model */,
@@ -207,6 +241,7 @@
 				D4D51EAE21EF868900F934F9 /* MainModels.swift */,
 				D4D51EB021EF8BF600F934F9 /* MainDisplayedRateTableViewCell.swift */,
 				D4D51EB121EF8BF600F934F9 /* MainDisplayedRateTableViewCell.xib */,
+				D4073EF921F24C570055916C /* MainRouter.swift */,
 			);
 			path = "Main Scene";
 			sourceTree = "<group>";
@@ -310,6 +345,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4D51E7421EF3D5F00F934F9 /* LaunchScreen.storyboard in Resources */,
+				D4073EFE21F250740055916C /* DetailRateViewController.xib in Resources */,
+				D4073F0821F25CD60055916C /* DetailRateValueTableViewCell.xib in Resources */,
 				D4D51E9F21EF7D9800F934F9 /* MainViewController.xib in Resources */,
 				D4D51EB321EF8BF600F934F9 /* MainDisplayedRateTableViewCell.xib in Resources */,
 				D4D51E7121EF3D5F00F934F9 /* Assets.xcassets in Resources */,
@@ -331,16 +368,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4D51EAA21EF82B400F934F9 /* CurrencyStoreProtocol.swift in Sources */,
+				D4073EFA21F24C570055916C /* MainRouter.swift in Sources */,
+				D4073F0721F25CD60055916C /* DetailRateValueTableViewCell.swift in Sources */,
 				D4D51E9921EF7D6600F934F9 /* Application.swift in Sources */,
 				D4D51EB221EF8BF600F934F9 /* MainDisplayedRateTableViewCell.swift in Sources */,
 				D4D51E9121EF503C00F934F9 /* Currency.swift in Sources */,
 				D4D51EA821EF828A00F934F9 /* CurrencyMockStore.swift in Sources */,
 				D4D51EA321EF817F00F934F9 /* MainWorker.swift in Sources */,
+				D4073F0421F25B510055916C /* DetailRateRouter.swift in Sources */,
 				D4D51E9721EF77E200F934F9 /* Date+Utils.swift in Sources */,
 				D4D51E9E21EF7D9800F934F9 /* MainViewController.swift in Sources */,
 				D4D51E6A21EF3D5C00F934F9 /* AppDelegate.swift in Sources */,
 				D4D51EA121EF7E4D00F934F9 /* MainPresenter.swift in Sources */,
+				D4073F0221F2532A0055916C /* DetailRateModels.swift in Sources */,
+				D4073F0021F2529A0055916C /* DetailRatePresenter.swift in Sources */,
+				D4073EF821F24B7E0055916C /* CurrencyDto.swift in Sources */,
 				D4D51EAF21EF868900F934F9 /* MainModels.swift in Sources */,
+				D4073EFD21F250740055916C /* DetailRateViewController.swift in Sources */,
 				D4D51E8F21EF413700F934F9 /* BPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

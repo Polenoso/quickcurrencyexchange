@@ -22,4 +22,21 @@ enum MainModels {
             let data: [Displayed]
         }
     }
+    
+    enum SelectRate {
+        
+        struct Request {
+            let index: Int
+        }
+        
+        struct ViewModel {}
+    }
+    
+    enum Error {
+        
+        struct ViewModel {
+            let title: String
+            let message: String
+        }
+    }
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum CurrencyType: String {
+enum CurrencyType: String, CaseIterable {
     case usd = "USD"
     case gbp = "GBP"
     case eur = "EUR"
