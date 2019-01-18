@@ -80,6 +80,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D4073EF521F249300055916C /* Detail Scene */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Detail Scene";
+			sourceTree = "<group>";
+		};
 		D4D51E5D21EF3D5C00F934F9 = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +191,7 @@
 		D4D51E9A21EF7D7700F934F9 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				D4073EF521F249300055916C /* Detail Scene */,
 				D4D51E9B21EF7D7C00F934F9 /* Main Scene */,
 			);
 			path = Scenes;

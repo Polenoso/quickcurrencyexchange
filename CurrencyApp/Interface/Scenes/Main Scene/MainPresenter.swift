@@ -31,9 +31,13 @@ final class MainPresenter: MainSceneInputProtocol {
     
     func getRates(request: MainModels.GetRates.Request) {
         
-        worker.fetchRates(for: .usd, from: Date(), to: Date()) { [unowned self] (bpi) in
-            self.cachedBpi = bpi
-            self.presentRates()
+        worker.fetchRates(for: .usd, from: Date(), to: Date()) { [unowned self] (bpi, error) in
+            if let error = error {
+                self.presentError(error)
+            } else {
+                self.cachedBpi = bpi
+                self.presentRates()
+            }
         }
     }
     
@@ -41,5 +45,9 @@ final class MainPresenter: MainSceneInputProtocol {
         let displayed: [MainModels.GetRates.Displayed] = self.cachedBpi?.bpis.map({MainModels.GetRates.Displayed(date: $0.date.toString(with: DateFormat.displayed), value: "\($0.rate) $")}) ?? []
         let viewModel = MainModels.GetRates.ViewModel.init(data: displayed)
         output?.displayRates(viewModel: viewModel)
+    }
+    
+    private func presentError(_ error: Swift.Error) {
+        
     }
 }

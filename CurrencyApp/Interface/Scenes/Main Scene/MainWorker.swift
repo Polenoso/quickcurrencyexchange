@@ -9,7 +9,7 @@
 import Foundation
 
 protocol MainSceneWorkerProtocol {
-    func fetchRates(for type: CurrencyType, from: Date, to: Date, completionBlock:(MultipleBPI) -> ())
+    func fetchRates(for type: CurrencyType, from: Date, to: Date, completionBlock:(MultipleBPI, Swift.Error?) -> ())
 }
 
 final class MainWorker: MainSceneWorkerProtocol {
@@ -20,10 +20,10 @@ final class MainWorker: MainSceneWorkerProtocol {
         self.currencyStore = store
     }
     
-    func fetchRates(for type: CurrencyType, from: Date, to: Date, completionBlock: (MultipleBPI) -> ()) {
+    func fetchRates(for type: CurrencyType, from: Date, to: Date, completionBlock: (MultipleBPI, Swift.Error?) -> ()) {
         
-        currencyStore.getBitcoinsRates(from: from, to: to, for: type) { (bpis) in
-            completionBlock(bpis)
+        currencyStore.getBitcoinsRates(from: from, to: to, for: type) { (bpis, error) in
+            completionBlock(bpis, error)
         }
     }
 }
